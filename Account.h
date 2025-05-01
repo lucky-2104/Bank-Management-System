@@ -2,21 +2,22 @@
 #define ACCOUNT_H
 
 #include <string>
-
+using namespace std;
 class Account {
 private:
-    std::string accountNumber;
-    std::string name;
-    std::string password;
+    string accountNumber;
+    string name;
+    string password;
     double balance;
 
 public:
-    Account(const std::string &accNo, const std::string &name, const std::string &pwd);
+    Account() = default;
+    Account(const string &accNo, const string &name, const string &pwd);
 
-    std::string getAccountNumber() const;
-    std::string getName() const;
-    std::string getPassword() const; // Added
-    bool checkPassword(const std::string &pwd) const;
+    string getAccountNumber() const;
+    string getName() const;
+    string getPassword() const; 
+    bool checkPassword(const string &pwd) const;
     double getBalance() const;
 
     void deposit(double amount);

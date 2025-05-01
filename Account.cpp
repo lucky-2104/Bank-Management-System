@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 Account::Account(const string &accNo, const string &name, const string &pwd)
     : accountNumber(accNo), name(name), password(pwd), balance(0.0) {}
 

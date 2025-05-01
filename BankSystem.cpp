@@ -46,7 +46,11 @@ bool BankSystem::login() {
                 case 1: showAccount(accNo); break;
                 case 2: deposit(accNo); break;
                 case 3: withdraw(accNo); break;
-                case 0: cout << "Logging out...\n"; break;
+                case 0:
+                    cout << "Saving the data" << endl;
+                    saveToFile("accounts.txt");
+                    cout << "Logging out...\n";
+                    break; 
                 default: cout << "Invalid choice!\n";
             }
         } while (choice != 0);
